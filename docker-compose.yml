@@ -1,0 +1,8 @@
+version: "3.8"
+services:
+  lezioni-web:
+    image: ghcr.io/andreacannone2012-sketch/lezioni-web:latest
+    container_name: lezioni-web
+    ports:
+      - "8091:80"
+    restart: unless-stopped
