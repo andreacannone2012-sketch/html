@@ -4,26 +4,44 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Lezioni sviluppo web</title>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tabler-icons/2.44.0/iconfont/tabler-icons.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="wrap">
-  <header>
+<div class="topbar">
+  <div class="topbar-inner">
+    <span class="material-symbols-rounded logo">school</span>
     <h1>Lezioni sviluppo web</h1>
-    <div>
-      <button id="authBtn">Collega calendario</button>
-    </div>
-  </header>
-  <div id="authStatus">Calendario non collegato</div>
-  <div class="days" id="days"></div>
-  <div class="progress" id="progress"></div>
-  <div id="list" class="list"></div>
-  <div id="msg"></div>
+  </div>
 </div>
+
+<main class="wrap">
+  <section class="calendar-card" id="calendarCard">
+    <div class="calendar-card-icon">
+      <span class="material-symbols-rounded">calendar_month</span>
+    </div>
+    <div class="calendar-card-text">
+      <div class="calendar-card-title" id="authStatus">Calendario non collegato</div>
+      <div class="calendar-card-sub">Collega Google Calendar per programmare le lezioni</div>
+    </div>
+    <button id="authBtn" class="btn-tonal">Collega</button>
+  </section>
+
+  <div class="week-strip" id="days"></div>
+
+  <div class="progress-row">
+    <div class="progress-text" id="progressText"></div>
+    <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+  </div>
+
+  <div id="list" class="list"></div>
+</main>
+
+<div id="snackbar" class="snackbar"></div>
+
 <script src="config.js"></script>
-<script src="https://accounts.google.com/gsi/client" async defer></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gapi-script/1.2.0/gapi-script.min.js"></script>
 <script src="app.js"></script>
 </body>
 </html>
