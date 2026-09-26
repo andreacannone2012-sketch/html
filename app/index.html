@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lezioni sviluppo web</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tabler-icons/2.44.0/iconfont/tabler-icons.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>Lezioni sviluppo web</h1>
+    <div>
+      <button id="authBtn">Collega calendario</button>
+    </div>
+  </header>
+  <div id="authStatus">Calendario non collegato</div>
+  <div class="days" id="days"></div>
+  <div class="progress" id="progress"></div>
+  <div id="list" class="list"></div>
+  <div id="msg"></div>
+</div>
+<script src="config.js"></script>
+<script src="https://accounts.google.com/gsi/client" async defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gapi-script/1.2.0/gapi-script.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

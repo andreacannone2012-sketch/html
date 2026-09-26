@@ -1,0 +1,35 @@
+:root{
+  --bg:#0f1115; --card:#171a21; --border:#262b36; --text:#e7e9ee; --muted:#9aa1ae;
+  --accent:#3f7bdb; --accent-bg:#152238; --success:#3fae5c; --danger:#d85a4a;
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:var(--bg);color:var(--text)}
+.wrap{max-width:480px;margin:0 auto;padding:16px}
+header{display:flex;justify-content:space-between;align-items:center;margin-bottom:16px}
+h1{font-size:18px;font-weight:600;margin:0}
+#authBtn{background:var(--accent);color:#fff;border:none;border-radius:8px;padding:8px 14px;font-size:13px;cursor:pointer}
+#authStatus{font-size:12px;color:var(--muted)}
+.days{display:flex;justify-content:space-between;margin-bottom:16px}
+.day{width:26px;height:26px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;color:var(--muted)}
+.day.today{background:var(--accent-bg);color:var(--accent);font-weight:600}
+.progress{font-size:12px;color:var(--muted);margin-bottom:12px}
+.list{display:flex;flex-direction:column;gap:8px}
+.card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:12px}
+.card.expanded{border-color:var(--accent)}
+.row{display:flex;align-items:center;gap:10px;cursor:pointer}
+.row i{font-size:20px;width:20px;text-align:center;color:var(--muted)}
+.card.expanded .row i{color:var(--accent)}
+.info{flex:1}
+.title{font-size:14px}
+.title.done{text-decoration:line-through;color:var(--muted)}
+.meta{font-size:11px;color:var(--muted)}
+.badge{font-size:11px;padding:2px 8px;border-radius:6px}
+.badge.scheduled{background:var(--accent-bg);color:var(--accent)}
+.badge.done{color:var(--success)}
+.badge.todo{color:var(--muted)}
+.actions{display:flex;gap:8px;margin-top:10px}
+.actions button{flex:1;font-size:12px;padding:7px;border-radius:8px;border:1px solid var(--border);background:transparent;color:var(--text);cursor:pointer}
+.actions button:hover{background:#1e2230}
+.actions input[type=date]{flex:1;background:transparent;border:1px solid var(--border);border-radius:8px;color:var(--text);padding:6px;font-size:12px}
+.phase-title{font-size:12px;color:var(--muted);text-transform:uppercase;margin:16px 0 6px;letter-spacing:.03em}
+#msg{font-size:12px;text-align:center;color:var(--muted);margin-top:16px;min-height:16px}
